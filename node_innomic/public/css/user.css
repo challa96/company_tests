@@ -1,0 +1,58 @@
+*/{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin:0px;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+	width:80%;
+}
+
+#useinp{
+	width:80%;
+	margin:1% auto;
+	padding:10px;
+	box-shadow:border-box;
+
+}    
+input{
+
+	margin:1% auto;
+	padding:8px;
+	background-color:orange;
+	color:white;
+	border:1px solid black;
+	border-radius:5px;
+	font-weight:bold;
+	font-size:110%;
+}
+
+.container {
+	display:inline-block;
+	padding:5px;
+	width:80%;
+	margin:2% 7%;
+
+}
+
+
+#car_models,#car_year,#chasse_info{
+	display:inline-block;
+	margin:1%;
+	padding:10px;
+}
+#error_loc{
+	display:none;
+	color:red;
+	letter-spacing:1px;
+	word-spacing:2px;
+}
+
+#cars_info,#year_info{
+	display:none
+}

@@ -1,0 +1,57 @@
+3 tables :
+
+
+car_chasse : id(primary key)  name .
+
+
+cars_model : id(primary key)  year.
+
+           
+model_year : id (primary key) year_id (foreign key) car_id(foreign key) chasse_name.
+
+
+query :
+
+
+create table car_model (id int not auto_increment, name varchar(100) not null,primary key(id));
+
+create table model_year (id int not auto_increment, name varchar(100) not null,primary key(id));
+
+
+create table car_chasse(id int not null primary key, year_id int , car_id int , chasse_name varchar(100) not null , foreign key (year_id) references model_year(id), foreign key (car_id) references cars_model(id);
+
+insert into cars_model (name) values (Alto800),(Ertiga),(K10),(Omni),(Dezire);
+
+insert into model_year (year) values (2015),(2016),(2017),(2018),(2019);
+
+
+insert into car_chasse (car_id,year_id,chasse_name) values ( 1,1,'A801'),(1,2,A803),(1,3,'A805'), (1,4,'A809'),values (1,5,'A900'),(2,1,'E999'),values (2,2,'E1020'), (2,3,'E1022'), (2,4,'E1003'), (2,5,'E3202'), (3,1,'K9302'),(3,2,'K948'),(3,3,'K387'),(3,4,'K32'), (3,5,'K233');
+
+
+
+
+insert into car_chasse (car_id,year_id,chasse_name) values (4,1,'O3984');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (4,2,'O2447');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (4,3,'O872');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (4,4,'O32');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (4,5,'O22');
+
+
+
+insert into car_chasse (car_id,year_id,chasse_name) values (5,1,'D39');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (5,2,'D398');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (5,3,'D9832');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (5,4,'D9');
+
+insert into car_chasse (car_id,year_id,chasse_name) values (5,5,'D3');
+
+
+
+select chasse_name  from car_chasse cc  inner join cars_model cm on cm.id = cc.car_id  inner join model_year my on my.id = cc.year_id where cc.car_id= ${model_id} and cc.year_id= ${year_id};

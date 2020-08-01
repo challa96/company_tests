@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Users Page </title>
+        <link rel="stylesheet" href="../css/user.css">
+        <script src="../js/users.js"></script>
+    </head>
+    <body class="loading">
+		<div id="useinp">
+			<input type="text" name="loc" id="user_loc" onchange="location_match()" placeholder="Eneter location" />
+			<span id="error_loc"> Location not Valid </span>
+		</div>
+		<div class="container">
+		<div id="car_models">
+			<select id="cars_info">
+					<option></option>
+					<option></option>
+					<option></option>
+					<option></option>
+					<option></option>
+			</select>
+		</div>
+		<div id="car_year">
+			<select id="year_info" onclick="load_chasse()" >
+					<option></option>
+					<option></option>
+					<option></option>
+					<option></option>
+					<option></option>
+			</select>
+		</div> 
+ 		<div id="chasse_info">
+		</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"-->
+        <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+        <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
+        <link rel="stylesheet" type="text/css" href="css/lgn.css">
+        <script  src="js/login.js"></script>
+    </head>
+	<body>
+        <div class="form"> 
+            <div id="login">   
+                <h1>Welcome Back!</h1>
+                <form  method="POST" onsubmit="return check_lgn();">
+                    <div class="field-wrap">
+                        <label>
+                            Email Address
+                        </label>
+                        <input type="email" name="mail" id="mail_id"  onchange="check_username()" required autocomplete="off"/>
+                    </div> 
+                        <span id="error_mail"> Enter correct Email Id </span>
+                    <div class="field-wrap">
+                        <label>
+                            Password
+                        </label>
+                        <input type="password" name="password" id="pswd"  onchange="check_pwd()" required autocomplete="off"/>
+                    </div> 
+                    <span id="error_pwd"> Enter correct password </span>
+					<span id="error_details">  </span>
+					<select id="userType" name="userType" onchange="check_user_type()">
+						<option value="admin"> Admin </option>
+						<option value="normal"> Normal </option>
+					</select>
+					<span id="error_type"> Select Admin only </span>
+                    <button class="button button-block" id="lgn">Log In</button>
+                </form>
+            </div>
+        </div>
+    </body>
+ </html>
